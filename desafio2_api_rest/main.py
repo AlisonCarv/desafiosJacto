@@ -122,7 +122,7 @@ def salvar_revisoes_db(data: dict):
     with open(DB_REVISOES_ARQUIVO, "w") as f:
         json.dump(data, f, indent=4)
 
-# endpoint para adicionar uma nova revisão a um carro
+# endpoint para adicionar uma nova revisão a um carro (create)
 @app.post("/carros/{carro_id}/revisoes", tags=["Banco Não Relacional - Revisões"])
 def adicionar_revisao(carro_id: str, revisao: RevisaoSchema):
     db_revisoes = ler_revisoes_db()
@@ -134,7 +134,7 @@ def adicionar_revisao(carro_id: str, revisao: RevisaoSchema):
     salvar_revisoes_db(db_revisoes)
     return {"status": f"revisão adicionada para o carro {carro_id}"}
 
-# endpoint para listar todas as revisões de um carro
+# endpoint para listar todas as revisões de um carro (read)
 @app.get("/carros/{carro_id}/revisoes", response_model=List[RevisaoSchema], tags=["Banco Não Relacional - Revisões"])
 def listar_revisoes(carro_id: str):
     db_revisoes = ler_revisoes_db()
@@ -142,3 +142,32 @@ def listar_revisoes(carro_id: str):
     if not revisoes_carro:
          raise HTTPException(status_code=404, detail="nenhuma revisão encontrada para este carro")
     return revisoes_carro
+
+# endpoint para atualizar uma revisão específica (update)
+@app.put("/carros/{carro_id}/revisoes/{revisao_index}", tags=["Banco Não Relacional - Revisões"])
+def atualizar_revisao(carro_id: str, revisao_index: int, revisao: RevisaoSchema):
+    db_revisoes = ler_revisoes_db()
+    
+    if carro_id not in db_revisoes or revisao_index >= len(db_revisoes[carro_id]):
+        raise HTTPException(status_code=404, detail="revisão não encontrada")
+    
+    db_revisoes[carro_id][revisao_index] = revisao.dict()
+    salvar_revisoes_db(db_revisoes)
+    return {"status": f"revisão {revisao_index} do carro {carro_id} atualizada"}
+
+# endpoint para deletar uma revisão específica (delete)
+@app.delete("/carros/{carro_id}/revisoes/{revisao_index}", status_code=204, tags=["Banco Não Relacional - Revisões"])
+def deletar_revisao(carro_id: str, revisao_index: int):
+    db_revisoes = ler_revisoes_db()
+
+    if carro_id not in db_revisoes or revisao_index >= len(db_revisoes[carro_id]):
+        raise HTTPException(status_code=404, detail="revisão não encontrada")
+
+    db_revisoes[carro_id].pop(revisao_index)
+    
+    # se não houver mais revisões para o carro, remove a chave do carro
+    if not db_revisoes[carro_id]:
+        del db_revisoes[carro_id]
+        
+    salvar_revisoes_db(db_revisoes)
+    return

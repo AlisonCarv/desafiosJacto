@@ -15,8 +15,10 @@ Os três desafios propostos foram resolvidos utilizando Python e um conjunto de 
 ## Estrutura do Repositório
 
 * **/ (Raiz)**
-    * `desafio1_jacto.ipynb`: Notebook com a análise exploratória do dataset de carros.
-    * `desafio3_jacto.ipynb`: Notebook com o modelo de IA para classificação de folhas.
+    * `desafio1_jacto.ipynb`: Notebook com a análise exploratória.
+    * `desafio3_jacto.ipynb`: Notebook com o modelo de IA.
+    * `cars_data.csv`: Dataset para o Desafio 1.
+    * `dataset.zip`: Dataset para o Desafio 3.
     * `README.md`: Este arquivo.
 * **/desafio2_api_rest/**
     * `main.py`: Código-fonte da API REST.
@@ -27,15 +29,13 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 ### **Desafio 1: Análise de Dados e Visualização**
 
-**Descrição:** O objetivo foi analisar um dataset de carros para extrair insights. A análise focou em identificar os 10 fabricantes com mais modelos registrados e, para cada um, visualizar a proporção de veículos movidos a gasolina e a diesel em um único gráfico.
+**Descrição:** Análise de um dataset de carros para identificar os 10 fabricantes com mais modelos e a proporção de seus veículos por tipo de combustível. O notebook é autossuficiente e busca os dados diretamente do repositório.
 
 **Como Executar:**
 
 1.  Abra o notebook **`desafio1_jacto.ipynb`** diretamente no Google Colab.
-2.  Baixe o dataset `cars_data.csv` e faça o upload para o ambiente de execução do Colab.
-3.  No painel esquerdo, clique nos três pontinhos ao lado do arquivo `cars_data.csv` e selecione **"Copiar caminho"**.
-4.  Na primeira célula de código, cole o caminho copiado na variável `caminho_do_arquivo`.
-5.  Execute as células do notebook em sequência para gerar a análise e o gráfico.
+2.  Execute a primeira célula de código. Ela irá clonar este repositório do GitHub para o ambiente do Colab, dando acesso ao `cars_data.csv`.
+3.  Execute as células seguintes em sequência para gerar a análise e o gráfico.
 
    ### **Desafio 2: API REST com Banco de Dados Relacional e Não-Relacional**
 
@@ -45,7 +45,7 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 **Como Executar:**
 
-1.  Clone o seu repositório e navegue até a pasta do desafio:
+1.  Clone **este** repositório e navegue até a pasta do desafio:
     ```bash
     git clone [https://github.com/AlisonCarv/desafiosJacto.git](https://github.com/AlisonCarv/desafiosJacto.git)
     cd desafiosJacto/desafio2_api_rest
@@ -75,7 +75,7 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 5.  Teste a API:
     * Abra seu navegador e acesse **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**.
-    * Use a interface interativa do Swagger para testar todos os endpoints. Crie carros, adicione revisões, consulte e delete dados.
+    * Use a interface interativa do Swagger para testar todos os endpoints.
 
 ### **Desafio 3: Implementação de Ferramenta de IA (Agricultura Digital)**
 
@@ -83,10 +83,10 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 **Como Executar:**
 
-1.  Certifique-se de que o arquivo **`dataset.zip`** foi enviado para a raiz do seu repositório no GitHub.
+1.  Certifique-se de que o arquivo **`dataset.zip`** está na raiz do repositório no GitHub.
 2.  Abra o notebook **`desafio3_jacto.ipynb`** diretamente no Google Colab.
 3.  **Importante:** Ative o ambiente de GPU para acelerar o treinamento (`Ambiente de execução` > `Alterar o tipo de ambiente de execução` > `GPU`).
-4.  Execute as células do notebook em sequência. A primeira célula irá clonar o seu próprio repositório para dentro do ambiente do Colab, dando acesso ao `dataset.zip`. As células seguintes irão descompactar os dados, treinar e testar o modelo.
+4.  Execute as células do notebook em sequência. A primeira célula irá clonar este repositório para o ambiente do Colab, dando acesso ao `dataset.zip`, e as seguintes irão treinar e testar o modelo.
 
 ---
 

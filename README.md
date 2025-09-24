@@ -92,4 +92,4 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 ## Autor
 
-Desenvolvido por **[Seu Nome Completo]**.
+Desenvolvido por **Álison Christian Rebouças Vidal de Carvalho**.

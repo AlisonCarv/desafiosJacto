@@ -45,10 +45,10 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 **Como Executar:**
 
-1.  Clone este repositório e navegue até a pasta do desafio:
+1.  Clone o seu repositório e navegue até a pasta do desafio:
     ```bash
-    git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
-    cd NOME_DO_REPOSITORIO/desafio2_api_rest
+    git clone [https://github.com/AlisonCarv/desafiosJacto.git](https://github.com/AlisonCarv/desafiosJacto.git)
+    cd desafiosJacto/desafio2_api_rest
     ```
 
 2.  Crie e ative um ambiente virtual. Este passo é crucial para isolar as dependências do projeto.
@@ -83,18 +83,13 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 **Como Executar:**
 
-1.  Abra o notebook **`desafio3_jacto.ipynb`** diretamente no Google Colab.
-2.  **Importante:** Ative o ambiente de GPU para acelerar o treinamento (`Ambiente de execução` > `Alterar o tipo de ambiente de execução` > `GPU`).
-3.  **Prepare os dados:**
-    * Crie uma pasta chamada `dataset` no seu computador.
-    * Dentro dela, crie duas subpastas: `saudavel` e `doente`.
-    * Popule cada pasta com 10-20 imagens correspondentes.
-    * Compacte a pasta `dataset` em um arquivo **`dataset.zip`**.
-4.  Faça o upload do arquivo `dataset.zip` para o ambiente do Colab.
-5.  Execute as células do notebook em sequência. A primeira parte treinará o modelo, e a segunda permitirá que você faça o upload de uma nova imagem para testar a classificação em tempo real.
+1.  Certifique-se de que o arquivo **`dataset.zip`** foi enviado para a raiz do seu repositório no GitHub.
+2.  Abra o notebook **`desafio3_jacto.ipynb`** diretamente no Google Colab.
+3.  **Importante:** Ative o ambiente de GPU para acelerar o treinamento (`Ambiente de execução` > `Alterar o tipo de ambiente de execução` > `GPU`).
+4.  Execute as células do notebook em sequência. A primeira célula irá clonar o seu próprio repositório para dentro do ambiente do Colab, dando acesso ao `dataset.zip`. As células seguintes irão descompactar os dados, treinar e testar o modelo.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-Desenvolvido por **Álison Christian Rebouças Vidal de Carvalho**.
+Desenvolvido por **[Seu Nome Completo]**.

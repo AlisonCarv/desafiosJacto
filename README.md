@@ -33,7 +33,7 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 **Como Executar:**
 
-1.  Abra o notebook **`desafio1_jacto.ipynb`** diretamente no Google Colab.
+1.  Abra o notebook [**`desafio1_jacto.ipynb`**](https://colab.research.google.com/github/AlisonCarv/desafiosJacto/blob/main/desafio1_jacto.ipynb) diretamente no Google Colab.
 2.  Execute a primeira célula de código. Ela irá clonar este repositório do GitHub para o ambiente do Colab, dando acesso ao `cars_data.csv`.
 3.  Execute as células seguintes em sequência para gerar a análise e o gráfico.
 
@@ -84,7 +84,7 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 **Como Executar:**
 
 1.  Certifique-se de que o arquivo **`dataset.zip`** está na raiz do repositório no GitHub.
-2.  Abra o notebook **`desafio3_jacto.ipynb`** diretamente no Google Colab.
+2.  Abra o notebook [**`desafio3_jacto.ipynb`**](https://colab.research.google.com/github/AlisonCarv/desafiosJacto/blob/main/desafio3_jacto.ipynb) diretamente no Google Colab.
 3.  **Importante:** Ative o ambiente de GPU para acelerar o treinamento (`Ambiente de execução` > `Alterar o tipo de ambiente de execução` > `GPU`).
 4.  Execute as células do notebook em sequência. A primeira célula irá clonar este repositório para o ambiente do Colab, dando acesso ao `dataset.zip`, e as seguintes irão treinar e testar o modelo.
 

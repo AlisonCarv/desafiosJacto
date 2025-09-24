@@ -1,7 +1,7 @@
 # 1: importações das ferramentas necessárias
-from fastapi import FastAPI, HTTPException, Depends
-from pydantic import BaseModel
-from sqlalchemy import create_engine, Column, Integer, String, Float
+from fastapi import FastAPI, HTTPException, Depends # framework web
+from pydantic import BaseModel # validação de dados
+from sqlalchemy import create_engine, Column, Integer, String, Float # ORM
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -170,4 +170,5 @@ def deletar_revisao(carro_id: str, revisao_index: int):
         del db_revisoes[carro_id]
         
     salvar_revisoes_db(db_revisoes)
+
     return

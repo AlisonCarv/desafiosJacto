@@ -47,7 +47,7 @@ Aqui estão a descrição e o guia de execução para cada desafio.
 
 1.  Clone **este** repositório e navegue até a pasta do desafio:
     ```bash
-    git clone [https://github.com/AlisonCarv/desafiosJacto.git](https://github.com/AlisonCarv/desafiosJacto.git)
+    git clone https://github.com/AlisonCarv/desafiosJacto.git
     cd desafiosJacto/desafio2_api_rest
     ```
 

@@ -4,6 +4,12 @@ Este repositório contém as soluções desenvolvidas para o processo seletivo d
 
 Os três desafios propostos foram resolvidos utilizando Python e um conjunto de ferramentas selecionadas para otimizar cada tarefa, demonstrando habilidades em análise de dados, desenvolvimento de backend e machine learning.
 
+## Apresentação em Vídeo
+
+Para uma demonstração completa das soluções, incluindo a execução do código e a explicação da linha de pensamento, assista à apresentação no YouTube:
+
+**[Assistir à Apresentação - Desafio Jacto](https://youtu.be/qXTbGYj0H7A)**
+
 ## Tecnologias Utilizadas
 
 * **Linguagem:** Python
